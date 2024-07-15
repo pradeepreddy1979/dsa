@@ -1,3 +1,4 @@
+
 import java.util.*;
 class Leftrotate{
     public static void print(int a[]){
@@ -7,6 +8,7 @@ class Leftrotate{
         System.out.println();
     }
 public static void reverseArray(int a[],int left,int right){
+
 while(left<=right){
     int temp=a[left];
     a[left]=a[right];
@@ -15,10 +17,10 @@ while(left<=right){
     right--;
 }
 }
-public static void leftrotate(int a[] ,int k){
+public static void rightrotate(int a[] ,int k){
     int n=a.length;
-reverseArray(a,0,k-1);
 reverseArray(a,k,n-1);
+reverseArray(a,0,k-1 );
 reverseArray(a,0,n-1);
 }
 
@@ -31,7 +33,7 @@ reverseArray(a,0,n-1);
     }
     int k=sc.nextInt();
     print(a);
-    leftrotate(a,k );
+    rightrotate(a,k );
 print(a);
 
 
@@ -39,5 +41,3 @@ print(a);
 
 } 
     
-
-

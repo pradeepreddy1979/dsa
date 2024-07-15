@@ -1,5 +1,5 @@
 import java.util.*;
-class Leftrotate{
+class Rightshift2{
     public static void print(int a[]){
         for(int i=0;i<a.length;i++){
             System.out.print(a[i]+" ");
@@ -15,10 +15,10 @@ while(left<=right){
     right--;
 }
 }
-public static void leftrotate(int a[] ,int k){
+public static void rightrotate(int a[] ,int k){
     int n=a.length;
-reverseArray(a,0,k-1);
-reverseArray(a,k,n-1);
+reverseArray(a,0,n-k-1);
+reverseArray(a,n-k,n-1 );
 reverseArray(a,0,n-1);
 }
 
@@ -31,7 +31,7 @@ reverseArray(a,0,n-1);
     }
     int k=sc.nextInt();
     print(a);
-    leftrotate(a,k );
+    rightrotate(a,k );
 print(a);
 
 
@@ -39,5 +39,4 @@ print(a);
 
 } 
     
-
 
